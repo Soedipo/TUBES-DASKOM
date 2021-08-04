@@ -1,0 +1,73 @@
+MODUL 8 : SEARCHING
+
+1. Sequential Search
+	Sequential search adalah metode pencarian yang paling sederhana, dimana pencarian dilakukan secara berurut dari data pertama sampai data yang dicari ditemukan. Data
+dibandingkan satu per satu dari awal sampai data ditemukan atau tidak ditemukan. Misalkan terdapat sebuah data pada array A : 5 3 1 8 4, dan yang dicari adalah
+angka 1, maka program akan mengecek data di setiap indeks satu persatu dan data akan ditemukan pada indeks ke 2 atau pada urutan ketiga. 
+
+	| #include<stdio.h>                    | 
+	| int a[100];                          | 
+	| int i,n,cari;			       | 
+	| main ()			       | 
+	| {				       | 
+	| printf("Banyak data : ");            | 
+	| scanf("%d",&n);                      | 
+	| for (i=0;i<=n-1;i++)		       | 
+	| {				       | 
+	| printf("Data ke-%d :",i+1);	       | 
+	| scanf("%d",&a[i]);		       | 
+	| }				       | 
+	| printf("Data yang ingin dicari : "); |
+	| scanf("%d",&cari);		       | 
+	| //proses sequential search	       | 
+	| i=0;				       | 
+	| while ((i<=n-1) && (a[i]!=cari))     | 
+	| i=i+1;			       | 
+	| if (a[i]==cari)		       | 
+	| printf("Data ditemukan pada  	       | 
+	| urutan : %d",i+1);		       | 
+	| else printf("Data tidak ditemukan"); | 
+	| } 				       | 
+
+2. Binary Search 
+	Metode ini hanya dapat dilakukan pada kumpulan data yang sudah diurutkan terlebih dahulu. Jika terdapat N buah data pada array A, data yang akan dicari akan
+dibandingkan dengan data A[mid], dimana mid adalah indeks tengah dari array A (low = 0, high = N-1, mid = (high + low) div 2 atau (0+N-1) div 2). Anggap data
+terurut secara ascending:
+- jika data A[mid] lebih besar dari data yang dicari maka akan dilakukan penyempitan pada area pencarian (nilai high menjadi mid - 1)
+- jika data A[mid] lebih kecil dari data yang dicari maka akan dilakukan penyempitan pada area pencarian (nilai low menjadi mid + 1) 
+Pencarian akan terus berlangsung hingga data ditemukan atau nilai sudah memenuhi kondisi mid = low = high tetapi data belum juga ditemukan. 
+
+	| #include <stdio.h>			 | 
+	| int a[100];				 | 
+	| int i,n,cari,idx,low,high, mid;	 |
+	| main ()				 | 
+	| {					 | 
+	| printf("Banyak data : ");		 | 
+	| scanf("%d",&n);			 | 
+	| for (i=0;i<n;i++)			 | 
+	| {					 | 
+	| printf("Data ke-%d : ",i+1);		 | 
+	| scanf("%d",&a[i]);			 | 
+	| }					 | 
+	| printf("Data yang dicari : ");	 | 
+	| scanf("%d",&cari);			 | 
+	| //data diurutkan terlebih dahulu       | 
+	| //isi bagian ini dengan proses sorting | 
+	| //proses binary search		 | 
+	| low=0;				 | 
+	| high=n-1;				 | 
+	| idx=-1;				 | 
+	| while ((low<=high) && (idx==-1))	 | 
+	| {					 | 
+	| mid=(low+high)/2;			 | 
+	| if (a[mid]==cari)			 | 
+	| idx=mid;				 | 
+	| else if (a[mid]<cari)			 | 
+	| low=mid+1;				 | 
+	| else high=mid-1;			 | 
+	| }					 | 
+	| if (idx!=-1)				 | 
+	| printf("Data ditemukan pada		 | 
+	| indeks : %d",idx);			 | 
+	| else printf("Data tidak ditemukan");   | 
+	| }				         | 

@@ -1,0 +1,5 @@
+2) Untuk mendeklarasikan array di bahasa C ditandai dengan tanda?
+   A. { }
+   B. | |
+   C. [ ]
+   D. ( )

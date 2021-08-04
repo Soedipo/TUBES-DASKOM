@@ -1,0 +1,5 @@
+2) Prinsip kerja dari selection sort adalah:
+   a. bandingkan data pertama dengan data kedua
+   b. mencari nilai ekstrim
+   c. bandingkan kembali data pertama dengan data kedua
+   d. ulangi proses hingga data terurut

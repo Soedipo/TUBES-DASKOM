@@ -1,0 +1,5 @@
+2) format dengan tipe data integer yang sering digunakan dalam bahasa pemrograman c adalah:
+   a.%f
+   b.%s
+   c.%c
+   d.%d

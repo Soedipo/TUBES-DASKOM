@@ -1,0 +1,162 @@
+MODUL 2 : TIPE DATA DAN KOMPONEN 
+
+				ALGORITMA
+
+1. Struktur Bahasa Pemrograman C
+
+	Dalam bahasa C, struktur programnya terdiri dari fungsi-fungsi. Berikut
+merupakan struktur umum dari bahasa C. 
+
+2. Variabel dan Konstanta
+
+	Variabel dan konstanta adalah suatu nama yang menyatakan tempat dalam memori
+komputer dan berisi sebuah nilai. Isi dari variabel dapat diubah sewaktu-waktu
+ketika program dieksekusi. Sementara konstanta tidak dapat diubah ketika program
+dieksekusi. Hal-hal penting yang harus diperhatikan dalam penamaan variabel dan
+konstanta antara lain :
+
+a. Harus diawali dengan huruf alfabet (A..Z, a..z) atau garis bawah ( _ ).
+
+b. Karakter selanjutnya bisa berupa huruf, digit atau karakter garis bawah ( _ ).
+
+c. Panjang maksimal identifier adalah 32 karakter, jika lebih maka yang dianggap adalah 32 karakter awal.
+
+d. Tidak boleh menggunakan spasi.
+
+e. Tidak boleh menggunakan operator aritmatika ( + - / * % ).
+
+f. Tidak boleh menggunakan karakter-karakter khusus seperti : , ; # @ $ & dan (.).
+
+g. Bahasa C bersifat case-sensitive, sehingga huruf kapital dan non-kapital dibedakan. 
+
+STRUKTUR PROGRAM
+-------------------------------
+// fungsi utama
+Main(){
+/*statemen */
+}
+
+// fungsi lain
+Fungsi_lain(){
+/* statemen */
+}
+
+3. Tipe Data
+
+	Tipe data adalah jenis dari suatu variabel yang digunakan dalam algoritma.Berikut adalah beberapa macam tipe data :
+	a. Int : Menyatakan bilangan bulat antara -32768 sampai +32767
+		Contoh : 1 0 3 -5 -7
+	b. Float : Menyatakan bilang real (asli) dari 10-38 sampai dengan 1038.
+		Contoh : 1.1, 1.3, -9.2
+	c. Char : Menyatakan sebuah karakter.
+		Contoh : A, f, 9, atau *.
+	d. Bool : Menyatakan nilai logika : true atau false. 
+
+4. Operasi Aritmatika
+
+	Untuk operasi aritmatika hanya tipe data int dan float saja yang dapat
+digunakan. Berikut operator aritmatika yang tersedia :
+
+a. Kali ( * ) : Digunakan untuk mengalikan dua buah bilangan.
+
+b. Bagi ( / ) : Digunakan untuk membagi dua buah bilangan
+
+c. Tambah ( + ) : Digunakan untuk menjumlahkan dua buah bilangan. 
+
+d. Kurang ( - ) : Digunakan untuk pengurangan antar dua buah bilangan.
+
+e. Modulo ( mod ) : Mod digunakan untuk mencari sisa dari hasil pembagian bagi dua bilangan. 
+		    Operator mod dalam bahasa C adalah "%". Operasi mod hanya bisa di gunakan oleh data bertipe int.
+
+5. Tipe Bentukan
+
+	Tipe bentukan adalah tipe data yang dibuat sendiri oleh pengguna. Tipe ini dibuat karena ada relasi antar variabel 
+yang bila digabungkan mempunyai suatu maksud yang sama. Untuk membuat tipe data bentukan, digunakan kata kunci "struct". 
+Salah satu contoh dari tipe data bentukan adalah mahasiswa, dimana mahasiswa mempunyai nama, nim, jurusan, dan nilai. 
+Contoh Program :
+
+a.Menampilkan kalimat 
+	#include <stdio.h>
+	int main ()
+	{
+ 	printf ("Hello World \n");
+ 	return 0;
+	}
+
+Output dari program di atas adalah : Hello World
+
+Penjelasan :
+a. Berkas header (berekstensi .h) adalah berkas yang berisi prototype fungsi, definisi konstanta, dan definisi variable. 
+   Prototype fungsi berupa judul suatu fungsi yang dilengkapi dengan argumen dan tipe argumen serta tipe nilai balik untuk 
+   fungsi yang memberikan nilai balik.
+
+b. Praprocessor #include adalah suatu perintah yang digunakan untuk mengatur kompiler agar membaca berkas 
+   header yang disertakan di belakang kata include saat pelaksanaan kompilasi.
+
+c. main() adalah fungsi yang akan dijalankan pertama kali ketika program dieksekusi. Kata int di depan main () menyatakan bahwa 
+   program memberikan nilai balik yang bertipe int.
+
+d. Nilai balik program ditentukan oleh pernyataan return. Pada program tersebut, return 0 menyatakan bahwa nilai balik program adalah nol. 
+   Nilai nol biasa digunakan untuk menyatakan bahwa program berhasil melaksanakan tugas yang diembannya. 
+
+e. Setiap pernyataan dalam bahasa C ditulis dengan diakhiri tanda titik-koma (;). Pada program di atas, ada dua buah pernyataan, yaitu : 
+   printf ("Hello World \n"); dan return 0;
+
+f. "\n" akan menyebabkan kursor berpindah ke baris berikut setelah Hello World dioutputkan. 
+ 
+b. Menambahkan nilai ke dalam variabel
+
+	Ada 3 cara untuk memasukan nilai ke dalam variabel, yaitu :
+	a. Assignment (nilai dimasukkan ke dalam variabel secara langsung) 
+		contoh : = 7 ; 
+
+	b. Input menggunakan perintah scanf () 
+		contoh : #include <stdio.h>
+			int main ()
+			{
+			int x,y,z;
+			printf("Bilangan 1 = "); scanf ("%d",&x);
+			printf("Bilangan 2 = ");scanf("%d",&y);
+			z=x+y;
+			printf("Bilangan 1+Bilangan 2= %i\n",z);
+			return 0;
+			}
+
+	c. Penggunaan konstanta 
+		contoh : #include <stdio.h>
+			#define phi 3.14
+			int main () {
+			int r;
+			float luas;
+			printf("Jari-Jari Lingkaran ="); scanf ("%d",&r);
+			luas = phi*r*r;
+			printf("Luas Lingkaran = %.2f \n",luas);
+			return 0;
+			}
+
+
+
+c. Tipe data bentukan
+	Berikut contoh tipe bentukan dari biodata mahasiswa yang terdiri dari beberapa variable, seperti : nama, jurusan, NIM, dan kelas. 
+contoh : #include <stdio.h>
+	struct biodata
+	{
+	char nama[20],jurusan[20], nim[20], kelas[20]
+	}b;
+	int main ()
+	{
+	printf("Nama : "); gets(b.nama);
+	printf("Jurusan : "); gets(b.jurusan);
+	printf("NIM : "); gets(b.nim);
+	printf("Kelas : "); gets(b.kelas);
+	printf("Biodata Anda : \n");
+	printf("Nama : %s \n",b.nama);
+	printf("Jurusan : %s \n",b.jurusan);
+	printf("NIM : %s \n",b.nim);
+	printf("Kelas : %s \n", b.kelas);
+	return 0;
+	} 
+
+
+
+

@@ -1,0 +1,147 @@
+MODUL 5 : FUNGSI 
+
+1. Dasar Teori:
+Fungsi merupakan subprogram yang sangat bermanfaat dalam pemrograman,
+terutama untuk program besar. Misalnya, kita memasukkan fungsi rumus luas prisma
+segiempat. Maka kita hanya perlu menuliskan rumus luas prisma satu kali pada fungsi tanpa
+harus menuliskan berulang kali pada program utama.
+Berikut istilah-istilah yang sering digunakan dalam fungsi:
+- Variabel lokal : variabel yang hanya dapat digunakan untuk algoritma didalam fungsi tersebut saja
+- Variabel global : variabel yang dapat digunakan baik dalam program utama maupun pada fungsi
+- Parameter aktual : parameter yang disertakan saat pemanggilan fungsi
+- Parameter formal : parameter yang diletakkan pada header fungsi 
+
+Struktur Fungsi 
+
+	| #include <stdio.h>        			| <--- Header
+	| int tambah(int a, int b); 			| 
+	| int x,y;                  			| <--- Variabel Global
+	| void main(){ 		    			|
+ 	| printf("Angka Pertama : "); 			|
+ 	| scanf("%d",&x); 				|
+ 	| printf("Angka Kedua : ");	scanf("%d",&y); |
+ 	| printf("Hasil Penjumlahan = %d",tambah(x,y)); | <--- Parameter aktual, isi x akan sesuai dengan variabel a pada fungsi dan y akan sesuai dengan b pada fungsi
+	| } 						| <--- Pemanggilan fungsi dengan mengoutputkannya
+	| int tambah(int a, int b){ 			| <--- Parameter formal
+ 	| int hasil; 					| <--- Tipe data hasil keluaran dari fungsi atau tipe return value
+ 	| hasil=a+b; 					| <--- Variabel Lokal 
+ 	| return hasil; 				|
+	| } 						| <--- Fungsi akan mengembalikan (mereturn) suatu nilai yang setipe dengan tipe hasil fungsinya 
+
+2. Fungsi (function)
+Fungsi adalah sebuah potongan kode yang ditujukan untuk menjalankan tugas yang spesifik, tugas tersebut membutuhkan informasi input yang disebut parameter dan biasanya
+suatu fungsi akan mengembalikan sebuah nilai (return value). Dalam penulisan fungsi diberikan nama/identifier, parameter formal (nilai masukan
+yang diberi juga nama dan dijelaskan tipenya), dan dideklarasikan tipe dari fungsi tersebut. Fungsi dapat dibuat sebelum atau sesudah penulisan program utama. Bila dibuat
+sesudah penulisan main, maka harus menuliskan prototype fungsi di bagian atas program.
+
+| Cara Pemanggilan Fungsi | C                        | Algoritma           |
+| Assignment              | a = tambah(x,y)          | a <- tambah(x,y)    |
+| Output (printf)         | printf("%d",tambah(x,y)) | Output(tambah(x,y)) |
+
+a. Penulisan fungsi setelah main program 
+
+	| #include <stdio.h>			        |
+	| int tambah(int, int); /* Prototype Fungsi */  |
+	| void main(){				        |
+ 	| int x,y;				        |
+ 	| printf("Angka Pertama : "); scanf("%d",&x);   |
+ 	| printf("Hasil Penjumlahan = %d",tambah(x,y)); |
+	| }						|
+	| int tambah(int a, int b){			|
+ 	| int c;					|
+ 	| c=a+b;					|
+ 	| return c;					|
+	| }						|
+
+		Cara penulisan seperti ini membutuhkan sebuah prototype fungsi, tujuannya adalah sebagai abstraksi supaya fungsi dapat dikenali oleh seluruh program.
+	Prototype fungsi hanya membutuhkan tipe data dari parameternya saja, jadi kita tidak harus menuliskan variabelnya. 
+
+b. Penulisan fungsi sebelum main program 
+
+	| #include <stdio.h> 				 | 
+	| int tambah(int a, int b){ 			 | 
+	| int c;					 |		 
+	| c=a+b; 					 | 
+	| return c; 					 | 
+	| } 						 | 
+	| void main(){ 					 | 
+	| int x,y;					 | 
+	|  printf("Angka Pertama : ");    		 |  
+	| scanf("%d",&x); 				 | 
+	| printf("Angka Kedua : "); 			 | 
+	|  scanf("%d",&y);				 | 
+	|  printf("Hasil Penjumlahan = %d",tambah(x,y)); |
+	| } 						 |
+
+3. Fungsi Void/Prosedur (Void Function)
+Fungsi void adalah sebuah fungsi yang tidak mengembalikan nilai atau tidak memiliki return value. Fungsi ini banyak digunakan pada 2 kasus berikut:
+-Menampilkan informasi pada layar agar dapat dibaca oleh user.
+-Fungsi dengan parameter reference, yaitu dengan mengirimkan alamat memori suatu variable kedalam parameter. 
+
+	| #include <stdio.h>		   | 
+	| void bilangan(int a){ 	   |
+ 	| if(a>0) printf("Positive");	   |
+ 	| else if(a<0) printf("Negative"); |
+ 	| else printf("Zero");		   | 
+	| } 				   |
+	| void main(){      		   |
+ 	| int x; 			   |
+ 	| printf("Angka: ");  		   |
+ 	| scanf("%d",&x);  		   |
+ 	| bilangan(x);  		   |
+	| }  				   |
+
+4. Parameter
+Parameter adalah data yang dimasukan ke dalam sebuah fungsi yang kemudian akan digunakan pada proses yang ada di dalam fungsi tersebut. Ada 2 cara untuk memasukkan
+parameter pada bahasa C:
+- Pass by value, artinya data yang dilewati hanya nilai dari suatu variabel kemudian disimpan pada variabel lokal pada fungsi. Dengan kata lain cara ini
+  menggunakan 2 variabel yang berbeda, sehingga variabel pada parameter aktual tidak bisa diubah dalam fungsi.
+- Pass by reference, artinya data yang dilewati adalah alamat memori dari suatu variabel. Dengan kata lain cara ini menggunakan variabel yang sama, sehingga
+  mengubah nilai variabel dalam fungsi dapat mengubah nilai variabel aslinya.
+Berikut contoh parameter pass by value dan parameter pass by reference:
+
+	| #include <stdio.h>  		  | <--- pass by value
+	| void tukar (int , int ); 	  |
+	| void main(){ 			  |
+	| int a,b; 			  |
+	| a=27; b=7; 			  |
+	| tukar(a, b);  		  |
+	| printf("Hasil Penukaran : \n"); |
+	| printf("a = %d \n",a); 	  |
+	| printf("b = %d",b); 		  |
+	| } 				  |
+	| void tukar (int x, int y)	  |
+	| int temp; 			  |
+	| temp=x; 			  |
+	| x=y; 				  |
+	| y=temp; 			  |
+	| }  				  |
+
+	| #include <stdio.h>		      | <--- pass by reference
+	| void tukar (int* , int* );	      | 
+	| void main(){			      | 
+	| int a,b;	 		      | 
+	| a=27; b=7;			      | 
+	| tukar(&a, &b); // Pass by reference | 
+	| printf("Hasil Penukaran : \n");     | 
+	| printf("a = %d \n",a);	      | 
+	| printf("b = %d",b);		      | 
+	| }				      | 
+	| void tukar (int*x, int*y){	      | 
+	| int temp;			      | 
+	| temp=*x;			      | 
+	| *x=*y;			      | 
+	| *y=temp;			      | 
+	| }				      | 
+
+5. Pointer
+Pointer adalah fitur pada C yang digunakan untuk mengakses dan manipulasi alamat memori suatu variabel. Pointer memiliki 2 operator yaitu:
+- Dereference operator (*), untuk memberikan nilai (value) dari suatu variabel.
+- Reference operator (&), untuk memberikan alamat memori dari suatu variabel. 
+
+	| #include <stdio.h> 	       | 
+	| int main(){		       | 
+ 	| int var = 5;		       | 
+	| printf("Value: %d\n", var);  | 
+ 	| printf("Address: %u", &var); | 
+	| } 			       | 

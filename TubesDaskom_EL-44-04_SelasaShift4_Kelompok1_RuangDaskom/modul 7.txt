@@ -1,0 +1,32 @@
+MODUL 7 : SORTING 
+
+Sorting :
+Sorting dalam modul ini diartikan sebagai algoritma pengurutan. Banyak metode yang bisa digunakan dalam mengurutkan data. Sorting dapat dilakukan dengan ascending (
+pengurutan dari nilai terkecil ke nilai terbesar ) dan descending ( pengurutan dari nilai terbesar ke terkecil ). Namun pada praktikum kali ini akan dibahas 4 metode, yaitu :
+1. Counting sort
+	Prinsip kerja counting sort adalah :
+	a. Membuat array baru dengan range sebanyak nilai minimum hingga maksimum dari array lama. Misalkan terdapat 6 data pada array A
+	   dari data tersebut, dapat disimpulkan bahwa nilai minimum adalah 0, dan nilai maksimum adalah 9, lalu dibuat array B dengan 10 tabel (indeks 0 – 9) 
+	b. Selanjutnya, isi dari array A akan dipindahkan ke array B berdasarkan frekuensi dari data-data yang terdapat pada array A
+	c. Lalu pindahkan isi dari array B ke array A 
+
+2. Selection sort
+	Prinsip kerja selection sort adalah :
+	a. Cari nilai ekstrim (maksimum/minimum) pada array A (misalkan array A adalah array yang ingin diurutkan) dan3 tukar dengan indeks pertama, lalu isolasi indeks
+           pertama.
+	b. Kemudian tentukan nilai ekstrim selanjutnya dan tukarkan dengan indeks kedua, lalu isolasi indeks kedua.
+	c. Ulangi langkah tersebut hingga data terakhir. 
+
+3. Insertion sort
+		Prinsip kerja dari insertion sort adalah mengurutkan bilangan-bilangan yang telah dibaca; dan berikutnya secara berulang akan menyisipkan bilangan-bilangan dalam
+	array yang belum terbaca ke sisi kiri array yang telah terurut. Proses pengurutan dimulai dari indeks kedua. 
+	Data pada indeks satu dibandingkan pada daerah abu-abu. Karena 3 < 5 maka kita perlu menyisipkan data kedua pada daerah abu-abu sehingga setelah penyisipan
+	tersebut, bagian abu-abu tetap dalam keadaan terurut secara relatif.
+
+4. Bubble sort
+		Prinsip kerja dari bubble sort adalah membandingkan suatu data (data ke i) dengan data disebelahnya (data ke i+1), tukar kedua data bila data tersebut lebih
+	besar dari data disebelahnya (pengurutan naik/ascending) Berikut ini adalah contoh sorting dengan metode bubble sort : 
+	a. Bandingkan data pertama dengan data kedua, karena 5 > 3 maka tukar kedua data tersebut. Dilanjutkan dengan membandingkan data pertama dan kedua,
+	   karena 5 < 7 maka tidak terjadi penukaran. begitu seterusnya sampai data ke n (6).
+	b. Bandingkan kembali data pertama dengan data kedua, lalu data kedua dengan data ketiga, begitu seterusnya hingga data ke n-1 (5) 
+	c. Ulangi proses tersebut hingga data terurut.

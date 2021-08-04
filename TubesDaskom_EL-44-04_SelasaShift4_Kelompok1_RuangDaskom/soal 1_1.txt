@@ -1,0 +1,5 @@
+1) fasilitas untuk menuliskan kode sumber dari perangkat lunak adalah:
+   a.linker
+   b.debugger
+   c.editor
+   d.compiler

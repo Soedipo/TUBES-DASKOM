@@ -1,0 +1,106 @@
+MODUL 3 : PERCABANGAN 
+
+Operasi boolean adalah operasi logika yang hanya akan menghasilkan nilai true atau false. Operasi ini akan sering digunakan untuk menentukan aksi yang akan dilakukan oleh
+program (dalam percabangan maupun perulangan). Operator boolean sebagai berikut : 
+== : Bernilai true jika a sama dengan b 
+	contoh : a == b 
+< : Bernilai true jika nilai a kurang dari b 
+	contoh : a < b
+<= : Bernilai true jika nilai a kurang dari / sama dengan b 
+	contoh : a <= b
+> : Bernilai true jika nilai a lebih dari b 
+	contoh : a > b
+>= : Bernilai true jika nilai a lebih dari / sama dengan b 
+	contoh : a >= b
+!= : Bernilai true jika nilai a tidak sama dengan b 
+	contoh : a != b
+
+Operator AND pada C adalah && | Operator OR pada C adalah || 
+Operator NOT pada C adalah !  | Operator XOR pada C adalah ^
+ 
+| a      |  b      |  a and b | a or b  | a xor b |
+| False  |  False  |  False   |  False  |  False  |
+| False  |  True   |  False   |  True   |  True   |
+| True   |  False  |  False   |  True   |  True   |
+| True   |  True   |  True    |  True   |  False  |
+
+| a     | not a |
+| False | True  |
+| True  | False |
+
+Percabangan :
+Percabangan adalah metode pemilihan suatu aksi yang akan dijalankan oleh program.
+Terdapat dua jenis percabangan, yaitu :
+1. if [kondisi] -- [aksi]
+   else – [aksi]
+Pada metode ini aksi akan dilakukan ketika kondisi bernilai true.
+   a. Satu Aksi
+	| #include <stdio.h>		  |
+	| int bil;			  |
+	| void main()			  |
+	| {				  |
+	| printf("Angka : ");		  |
+	| scanf("%d",&bil);		  |
+	| if (bil%2==0)			  |
+	| printf("Bilangan Genap");	  |
+	| else printf("Bilangan Ganjil"); |
+	| } 				  |
+
+Program di atas akan menampilkan "Bilangan Genap" jika nilai bil yang dimasukkan
+bernilai genap (bilangan genap berarti habis dibagi dua atau dapat ditulis bil % 2 = 0)
+   b. Dua Aksi 
+	| #include <stdio.h> 					   |
+	| #include <string.h>					   |
+	| char uname[50],pass[50];				   |
+	| int main()						   |
+	| {							   |
+	| printf("Username : "); gets(uname); 			   |
+	| printf("Password : "); gets(pass);		     	   |
+	| if (strcmp(uname,"Daskom")==0 && strcmp(pass,"Kece")==0) |
+ 	| {							   |
+	| printf("Login Sukses \n");				   |
+	| printf("Silahkan Lanjutkan\n"); 			   |
+	|  }							   |
+	| else printf("Login Gagal\n");          		   |
+	| return 0;						   |
+	| } 							   |
+
+	Sama halnya dengan program sebelumnya, aksi dalam if akan dilakukan ketika kondisi bernilai true, sebaliknya bila kondisi bernilai false maka aksi pada else yang akan
+dilakukan. 
+	Program di atas akan menampilkan output "Login Sukses" jika username dan password yang dimasukkan sesuai dengan yang ada di baris program di atas, yaitu
+"Daskom" dan "kece". *note :
+- jika aksi (pada if atau else) yang akan dikerjakan lebih dari satu, maka tambahkan "{ (sebelum aksi pertama) dan "}" (setelah aksi terakhir).
+
+- Anda tidak bisa menggunakan tanda = untuk membandingkan string. Perbandingan dilakukan menggunakan fungsi strcmp(). Fungsi strcmp() terdapat pada header #include<string.h>. 
+  Sehingga perlu menyertakan header #include<string.h> pada program menggunakan perintah #include<string.h> di awal program agar fungsi strcmp() dapat terbaca.
+
+- Pada fungsi strcmp(string1, string2) terdapat beberapa return value, diantaranya :
+=> 0  : jika string1 sama dengan string2
+=> <0 : jika string1 lebih kecil dari string2
+=> >0 : jika string1 lebih besar dari string2
+
+2. case [variabel] of
+| #include <stdio.h> 				       |
+| int i; 					       |
+| void main () 					       |
+| { 						       |
+| printf("Masukkan urutan hari :"); 		       |
+| scanf("%d",&i);				       |
+| switch (i)				   	       |
+| {						       |
+| case 1:printf("Senin");break;			       |
+| case 2:printf("Selasa");break;		       |
+| case 3:printf("Rabu");break;			       |
+| case 4:printf("Kamis");break:			       |
+| case 5:printf("Jumat");break;			       |
+| case 6:printf("Sabtu");break; 		       |
+| case 7:printf("Minggu");break;		       |
+| default : printf("Angka di luar urutan hari");break; |
+| }						       |
+| }						       |
+
+Dari contoh di atas aksi yang akan dilakukan tergantung dengan nilai yang terdapat pada variabel i, ketika i bernilai 1 maka program akan menampilkan kata "senin" begitupun
+selanjutnya sampai angka 7. Default berfungsi jika case 1 - 7 tidak terpenuhi, maka perintah default akan dijalankan. Break berfungsi untuk menghentikan aksi yang dilalukan sampai 
+pada case tersebut sehingga aksi pada case selanjutnya tidak diproses. 
+ 
+

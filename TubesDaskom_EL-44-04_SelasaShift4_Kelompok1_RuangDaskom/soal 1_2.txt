@@ -1,0 +1,5 @@
+2) nama simbol untuk Menyatakan suatu tindakan yang dilakukan oleh komputer adalah:
+   a.decision
+   b.process
+   c.terminator
+   d.flow line

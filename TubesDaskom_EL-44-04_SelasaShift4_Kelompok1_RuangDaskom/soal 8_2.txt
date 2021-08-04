@@ -1,0 +1,5 @@
+2) Pengertian pada metode binary search adalah:
+   a. metode pencarian yang paling sederhana
+   b. kumpulan data yang sudah diurutkan terlebih dahulu
+   c. mencari nilai ekstrim
+   d. membuat array baru

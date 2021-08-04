@@ -1,5 +1,0 @@
-1) Fungsi yang tidak mengembalikan nilai atau tidak memiliki return value adalah:
-   a. Fungsi Void/Prosedur (Void Function)
-   b. Fungsi (function)
-   c. Struktur Fungsi 
-   d. Parameter

@@ -1,5 +1,0 @@
-2) Berikut adalah cara yang benar untuk mendeklarasikan array di bahasa C!
-   A. int nilai{10};
-   B. int nilai[10];
-   C. int [] nilai = new int[10];
-   D. int nilai;

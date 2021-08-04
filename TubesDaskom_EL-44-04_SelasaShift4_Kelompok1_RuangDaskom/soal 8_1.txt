@@ -1,5 +1,0 @@
-1) Pengertian pada metode sequential search adalah:
-   a. metode pencarian yang paling sederhana
-   b. kumpulan data yang sudah diurutkan terlebih dahulu
-   c. mencari nilai ekstrim
-   d. membandingkan kedua data

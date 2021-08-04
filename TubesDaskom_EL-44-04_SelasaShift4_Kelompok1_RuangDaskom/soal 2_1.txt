@@ -1,5 +1,0 @@
-1) hal-hal yang harus diperhatikan dalam penamaan variabel dan konstanta,kecuali:
-   a.Harus diawali dengan huruf alfabet (A..Z, a..z) atau garis bawah ( _ )
-   b.Karakter selanjutnya bisa berupa huruf, digit atau karakter garis bawah ( _ )
-   c.Tidak boleh menggunakan operator aritmatika
-   d.boleh menggunakan spasi

@@ -1,5 +1,0 @@
-1) simbol operator boolean yang bernilai Bernilai true jika nilai a kurang dari / sama dengan b 
-   a. <=
-   b. <
-   c. >
-   d. ==

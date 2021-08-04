@@ -1,0 +1,5 @@
+2) Fitur pada C yang digunakan untuk mengakses dan manipulasi alamat memori suatu variabel adalah:
+   a. Fungsi Void/Prosedur (Void Function)
+   b. Fungsi (function)
+   c. Struktur Fungsi
+   d. Pointer

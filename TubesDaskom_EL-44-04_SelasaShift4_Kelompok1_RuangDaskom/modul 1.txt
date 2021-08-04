@@ -1,0 +1,90 @@
+MODUL 1 : INSTALASI IDE DAN PENGANTAR ALGORITMA 
+
+Dasar Teori :
+
+IDE
+
+	IDE (Integrated Development Environment) adalah program komputer yang memiliki
+beberapa fasilitas yang diperlukan dalam pembangunan perangkat lunak. Tujuan dari IDE
+adalah untuk menyediakan semua utilitas yang diperlukan dalam membangun perangkat
+lunak.
+	
+ALGORITMA
+
+	Algoritma adalah serangkaian langkah yang tepat, terperinci, dan terbatas dalam
+menyelesaikan masalah. Tepat artinya langkah tersebut selalu benar untuk menyelesaikan
+masalah. Terperinci artinya langkah tersebut detail dan dapat dieksekusi oleh komputer.
+Terbatas artinya suatu saat langkah tersebut harus berhenti. Jika langkah “tidak pernah”
+berhenti namanya looping forever.
+	Sebagai contoh sederhana, Anda diminta untuk menghitung keliling persegi panjang.
+Pada kasus ini, Anda bisa menentukan keluaran berupa keliling dan masukan berupa
+panjang dan lebar. Setelah itu, Anda harus menentukan bagaimana keliling persegi panjang
+dihitung berdasarkan data panjang dan lebar.
+
+Keliling=panjang+lebar+panjang+lebar
+
+atau
+
+Keliling=2x(panjang+lebar)
+
+Anda bisa menuangkan algoritma sebagai berikut :
+1. Masukkan nilai panjang dan lebar persegi panjang.
+
+2. Hitung keliling persegi panjang dengan menggunakan rumus 2x(panjang+lebar).
+
+3. Tampilkan nilai keliling persegi panjang.
+
+	Algoritma tidak selamanya dinyatakan dalam bahasa manusia seperti yang
+dicontohkan sebelumnya. Sering kali algoritma dinyatakan dalam bentuk pseudocode
+(pseudocode) atau diagram alir (flowchart).
+
+1. Pseudocode (Pseudocode)
+
+	Pseudocode adalah suatu bentuk algoritma yang menggunakan berbagai notasi yang
+dimaksudkan untuk menyederhanakan bentuk kalimat manusia. Sebagai contoh, kalimat
+seperti "Hitung keliling persegi panjang dengan menggunakan rumus 2x(panjang+lebar)"
+dapat disederhanakan menjadi : keliling = 2x(panjang+lebar).
+	Pseudocode sering kali berorientasi pada bahasa pemrograman tertentu. Contoh
+berikut menunjukkan pseudocode yang berorientasi pada bahasa pemrograman Pascal
+(pseudopascal). 
+
+Algoritma (Pseudopascal):
+Program keliling persegi panjang
+
+Kamus :
+p, l, k : integer
+
+Algoritma :
+output ('Panjang = ')
+input(p)
+output ('Lebar = ')
+input (l)
+k <--- 2*(p+l)
+output('Keliling Persegi panjang = ', k)  
+
+2. Diagram Alur (Flowchart)
+
+	Flowchart adalah suatu standar untuk menggambarkan suatu proses. Setiap langkah
+dalam algoritma dinyatakan dengan sebuah simbol dan aliran setiap langkah (dari suatu
+langkah ke langkah lain) dinyatakan dengan garis yang dilengkapi panah.
+Berikut ini beberapa petunjuk yang harus diperhatikan dalam pembuatan flowchart :
+	
+1. Flowchart digambarkan dari halaman atas ke bawah dan dari kiri ke kanan.
+
+2. Aktivitas yang digambarkan harus didefinisikan secara hati-hati dan definisi ini harus
+dapat dimengerti oleh pembacanya.
+
+3. Kapan aktivitas dimulai dan berakhir harus ditentukan secara jelas.
+
+4. Setiap langkah dari aktivitas harus diuraikan dengan menggunakan deskripsi kata kerja,
+   misalkan menghitung pajak penjualan.
+
+5. Setiap langkah dari aktivitas harus berada pada urutan yang benar.
+
+6. Lingkup dan range dari aktivitas yang sedang digambarkan harus ditelusuri dengan hati-hati. 
+   Percabangan-percabangan yang memotong aktivitas yang sedang
+   digambarkan tidak perlu digambarkan pada flowchart yang sama. Simbol konektor
+   harus digunakan dan percabangannya diletakan pada halaman yang terpisah atau
+   hilangkan seluruhnya bila percabangannya tidak berkaitan dengan sistem.
+
+7. Gunakan simbol-simbol flowchart yang standar. 

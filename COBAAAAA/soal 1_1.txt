@@ -1,0 +1,6 @@
+1) fasilitas untuk menuliskan kode sumber dari perangkat lunak adalah:
+asdasd
+  asdasd a.linker
+   b.debugger
+   c.editor
+   d.compiler

@@ -1,0 +1,5 @@
+2) simbol operator XOR pada C adalah:
+   a. &&
+   b. !
+   c. ^
+   d. ==

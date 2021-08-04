@@ -1,0 +1,92 @@
+MODUL 4 : PERULANGAN 
+
+Perulangan
+-------------------------------------
+
+Perulangan dalam pemrograman digunakan untuk mengulangi sebuah blok kode tertentu
+sampai memenuhi kondisi yang diinginkan. Berikut adalah jenis-jenis perulangan dalam
+bahasa pemrograman C:
+   1. While loop
+      Pada metode ini, aksi akan dilakukan selama kondisi bernilai true dan akan berhenti jika kondisi menjadi false. Pada perulangan ini jumlah perulangan belum
+      diketahui secara pasti. 
+	contoh :
+	| #include <stdio.h> |
+	| int i; 	     |
+	| void main() 	     |   Pada contoh di atas terdapat aksi "i = i + 1" yang akan mengubah output kondisi "i <= 10" menjadi false (pada saat i > 10) sehingga perulangan akan berhenti. Artinya "i wajib bernilai <= 10" agar true selain itu false.
+	| { 		     |
+	| i=1; 		     |
+	| while (i<=10)      |
+	| { 		     |
+	| printf("%d \n",i); |
+	| i=i+1; 	     |
+	| } 	 	     |
+	| } 		     |
+
+   2. Do while loop
+      Pada metode perulangan ini, aksi akan dilakukan minimal satu kali, hal ini disebabkan adanya pengecekan kondisi setelah aksi dilakukan untuk pertama kali.
+      Aksi akan terus dilakukan selama kondisi bernilai true dan berhenti ketika kondisi bernilai false. Pada perulangan ini jumlah perulangan belum diketahui secara pasti.
+	contoh : 
+	| #include <stdio.h> |  Catatan: Pernyataan i++ identik dengan i=i+1; 
+	| int i;	     |
+	| void main (){	     |
+	| i=1;		     |
+	| do{		     |
+	| printf("%d \n",i); |
+	| i++; 		     |
+	| }while (i<10);     |
+	| } 		     |
+
+   3. For loop
+      Pada perulangan ini jumlah perulangan telah diketahui dengan pasti.
+	contoh : 
+	| #include <stdio.h>  |
+	| int i;	      |   Catatan : jika ingin mencacah turun (misal 10  1) maka gunakan for(i=10; i>=1; i--) 
+	| void main(){	      |
+	| for (i=1; i<8; i++) |
+	| printf("%d \n",i);  |
+	| }  		      |
+
+Pre-Increment dan Post-Increment
+------------------------------------
+
+Kedua istilah ini merupakan cara untuk menambahkan nilai pada suatu variabel.
+- post-increment
+  post-increment mengembalikan nilai ke nilai yang belum mengalami operasi penambahan (nilai dioutputkan terlebih dahulu, kemudian ditambah).
+- pre-increment 
+  mengembalikan nilai ke nilai yang telah mengalami operasi penambahan (nilai ditambahkan terlebih dahulu, kemudian dioutputkan).
+  Perbedaan dari keduanya akan terlihat berbeda ketika menggunakan perintah output
+  seperti contoh dibawah: 
+	| #include<stdio.h> 		   | 
+	| void main() 			   |  Sebaliknya jika digunakan untuk mengurangi nilai pada suatu variable maka disebut decrement, contoh: i-- atau --i.
+	| {  				   |
+	| int i=0; 			   |
+ 	| // Contoh Post-Increment 	   |
+ 	| printf("\ni = %d",i++); // i = 0 |
+ 	| // Contoh Pre-Increment	   |
+ 	| printf("\ni = %d",++i); // i = 2 | 
+	| } 				   |
+
+Perintah Kontrol
+-------------------------------------
+
+Perintah kontrol digunakan pada perulangan untuk mengubah hasil eksekusi perulangandari keadaan normalnya.
+Dibawah ini merupakan perintah-perintah kontrol pada perulangan: 
+- perintah break :
+	| #include<stdio.h>  |
+	| int i; 	     |
+	| void main(){	     |
+	| for(i=1;i<10;i++){ |
+ 	| if(i==7) break;    |
+ 	| printf("%d\n",i);  |
+ 	| } 		     |
+	| } 		     |
+
+- perintah continue :
+	| #include<stdio.h>  |
+	| int i;	     |
+	| void main(){	     |
+ 	| for(i=1;i<10;i++){ |
+ 	| if(i==7) continue; | 
+ 	| printf("%d\n",i);  |
+ 	| }		     |
+	| }		     |

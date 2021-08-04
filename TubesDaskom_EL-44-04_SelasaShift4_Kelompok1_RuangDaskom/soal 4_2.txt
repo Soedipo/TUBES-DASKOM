@@ -1,0 +1,5 @@
+2) Pengertian dari suatu variabel pre-increment:
+ a. nilai dioutputkan terlebih dahulu, kemudian ditambah
+ b. nilai dioutputkan terlebih dahulu, kemudian dikurangkan
+ c. nilai ditambahkan terlebih dahulu, kemudian dioutputkan
+ d. nilai dikurangkan terlebih dahulu, kemudian dioutputkan
